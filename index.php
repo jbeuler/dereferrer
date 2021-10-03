@@ -245,19 +245,21 @@ body {
     ?>
 
 <?php echo urldecode($url); ?> &hellip;
+
 <?php echo '</p>
-</div>			
-</body>';?>
+</div>';?>
+
+    <a style="display: none;" id="redlink" href="<?php echo urldecode($url); ?>" rel="noreferrer"></a>
+</body>
 
 <script>
 
     $(document).ready(function(){
-    var domain = "<?php echo $domain; ?>";
-    var url = "<?php echo $url; ?>";
     //code here
     setTimeout(function() {
     //Redirect to blankReferrer.php
-    window.location.replace(domain + '/blankReferrer.php/?' + url);
+    //window.location.replace(domain + '/blankReferrer.php/?' + url);
+    document.getElementById('redlink').click();
     }, 3000);
     });
 
