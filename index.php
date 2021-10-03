@@ -255,10 +255,10 @@ body {
     var domain = "<?php echo $domain; ?>";
     var url = "<?php echo $url; ?>";
     //code here
-    setTimeout(4000, function() {
+    setTimeout(function() {
     //Redirect to blankReferrer.php
     window.location.href = domain + '/blankReferrer.php/?' + url;
-    });
+    }, 3000);
     });
 
     </script>
