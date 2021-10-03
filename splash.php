@@ -98,9 +98,12 @@
             <form action="" method="post">
                 <input id="url" type="url" name="url" placeholder="Enter the URL you want to anonymize"
                        style="width: 300px;">
-                <textarea style="display: none;" id="js-copytextarea"></textarea>
                 <button type="button" id="anonymize-url-btn">Anonymize</button>
             </form>
+            <div style="display:none; border:none;margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: #0e66b914;" id="js-copylabel" readonly></div>
         </div>
 
         <div class="row icon-boxes">
@@ -352,22 +355,23 @@
 
 
         if (urlIsValid(urlValue)) {
-            var copyTextarea = document.querySelector('#js-copytextarea');
+            var copyLabel = document.querySelector('#js-copylabel');
 
             try {
-                copyTextarea.value = domain + '/?' + escape(urlValue);
+                copyLabel.innerHTML = domain + '/?' + escape(urlValue);
+                copyLabel.style.display = 'block';
 
                 /* Copy the text inside the text field */
-                navigator.clipboard.writeText(copyTextarea.value);
+                // navigator.clipboard.writeText(copyLabel.value);
 
                 success = true;
 
-                setTimeout(function(){
-                    if(success) {
-                        alert('The anonymous url has been copied to clipboard!');
-                        success = false;
-                    }
-                });
+                // setTimeout(function(){
+                //     if(success) {
+                //         alert('The anonymous url has been copied to clipboard!');
+                //         success = false;
+                //     }
+                // });
 
             } catch (err) {
                 console.log('Oops, unable to copy');
