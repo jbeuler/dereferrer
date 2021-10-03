@@ -257,7 +257,7 @@ body {
     //code here
     setTimeout(function() {
     //Redirect to blankReferrer.php
-    window.location.href = domain + '/blankReferrer.php/?' + url;
+    window.location.replace(domain + '/blankReferrer.php/?' + url);
     }, 3000);
     });
 
