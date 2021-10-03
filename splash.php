@@ -366,8 +366,6 @@
         } else {
             alert('Please enter a valid url!')
         }
-        if (success)
-            alert('The anonymous url has been copied to clipboard!');
     }
 
     document.getElementById('anonymize-url-btn')
