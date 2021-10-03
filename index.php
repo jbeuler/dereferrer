@@ -223,15 +223,7 @@ body {
 </style>
 <meta charset="utf-8">
     ';?>
-<script>
-var domain = "<?php echo $domain; ?>";
-var url = "<?php echo $url; ?>";
-        //code here
-        setTimeout(4000, function() {
-            //Redirect to blankReferrer.php
-            window.location.href = domain + '/blankReferrer.php/?' + url;
-        });
-    </script>
+
 <title><?php echo urldecode($url); ?> &hellip;
 <?php echo '</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -255,9 +247,23 @@ var url = "<?php echo $url; ?>";
 <?php echo urldecode($url); ?> &hellip;
 <?php echo '</p>
 </div>			
-</body>
+</body>';?>
 
-</html>';
+<script>
+
+    $(document).ready(function(){
+    var domain = "<?php echo $domain; ?>";
+    var url = "<?php echo $url; ?>";
+    //code here
+    setTimeout(4000, function() {
+    //Redirect to blankReferrer.php
+    window.location.href = domain + '/blankReferrer.php/?' + url;
+    });
+    });
+
+    </script>
+    <?php
+echo '</html>';
 
 }
 
