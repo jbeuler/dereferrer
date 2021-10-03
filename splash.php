@@ -38,6 +38,10 @@
     ======================================================== -->
 
 <style>
+     #anonymize-form {
+         display: inline-flex;
+     }
+
     #js-copylabel {
         border: none;
         margin-top: 35px;
@@ -48,9 +52,31 @@
         margin-left: auto;
     }
 
+     input#url {
+         width: 170px;
+         border: 1px solid #d3d3d380;
+         padding: 16px 15px;
+     }
+
+     #anonymize-url-btn {
+         border: none;
+         padding: 17px 20px;
+         border-radius: 0 5px 5px 0;
+     }
+
+     @media only screen and (min-width: 375px) {
+         input#url {
+             width: 220px;
+         }
+     }
+
     @media only screen and (min-width: 768px) {
         #js-copylabel {
             width: 600px;
+        }
+
+        input#url {
+            width: 315px;
         }
     }
 </style>
@@ -111,9 +137,8 @@
         </div>
         <div class="text-center" style="margin-top:20px;">
             <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a>-->
-            <form action="" method="post">
-                <input id="url" type="url" name="url" placeholder="Enter the URL you want to anonymize"
-                       style="width: 300px;">
+            <form action="" method="post" id="anonymize-form">
+                <input id="url" type="url" name="url" placeholder="Enter the URL you want to anonymize">
                 <button type="button" id="anonymize-url-btn">Anonymize</button>
             </form>
             <div style="display:none;" id="js-copylabel" readonly></div>
