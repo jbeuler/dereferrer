@@ -37,7 +37,23 @@
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
 
+<style>
+    #js-copylabel {
+        border: none;
+        margin-top: 35px;
+        padding: 20px;
+        border-radius: 15px;
+        background: rgba(14, 102, 185, 0.08);
+        margin-right: auto;
+        margin-left: auto;
+    }
 
+    @media only screen and (min-width: 768px) {
+        #js-copylabel {
+            width: 600px;
+        }
+    }
+</style>
 </head>
 
 <body>
@@ -100,14 +116,7 @@
                        style="width: 300px;">
                 <button type="button" id="anonymize-url-btn">Anonymize</button>
             </form>
-            <div style="display:none; border: none;
-    margin-top: 35px;
-    padding: 20px;
-    border-radius: 15px;
-    background: rgba(14, 102, 185, 0.08);
-    width: 600px;
-    margin-right: auto;
-    margin-left: auto;" id="js-copylabel" readonly></div>
+            <div style="display:none;" id="js-copylabel" readonly></div>
         </div>
 
         <div class="row icon-boxes">
@@ -148,7 +157,6 @@
                     <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
                 </div>
             </div>
-
         </div>
     </div>
 </section><!-- End Hero -->
