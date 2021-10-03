@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="ec2-52-21-196-178.compute-1.amazonaws.com" id="411cb140-42d3-4f55-8314-5163db7067f4" keyPath="$USER_HOME$/.ssh/keypair04fev20.pem" port="22" nameFormat="DESCRIPTIVE" username="ec2-user" />
+    </configs>
+  </component>
+</project>

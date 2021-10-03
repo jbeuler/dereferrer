@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f9f6e53c-cb4b-444b-a2b8-3dad85a575ff" name="deferrerpro">
+        <fileTransfer accessType="SFTP" host="ec2-52-21-196-178.compute-1.amazonaws.com" port="22" sshConfigId="411cb140-42d3-4f55-8314-5163db7067f4" sshConfig="ec2-user@ec2-52-21-196-178.compute-1.amazonaws.com:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
