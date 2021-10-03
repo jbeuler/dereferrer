@@ -9,9 +9,7 @@
 </body>
 
 <script>
-    setTimeout(function(){
         document.getElementById('redlink').click();
-    })
 </script>
 
 </html>
