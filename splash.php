@@ -337,6 +337,7 @@
 <script>
 
     var domain = "<?php echo $domain; ?>";
+    var success = false;
 
     function urlIsValid(str) {
         var a = document.createElement('a');
@@ -348,7 +349,7 @@
         event.preventDefault();
         var urlInput = document.getElementById('url');
         var urlValue = urlInput.value;
-        var success = false;
+
 
         if (urlIsValid(urlValue)) {
             var copyTextarea = document.querySelector('#js-copytextarea');
@@ -358,7 +359,15 @@
 
                 /* Copy the text inside the text field */
                 navigator.clipboard.writeText(copyTextarea.value);
+
                 success = true;
+
+                setTimeout(function(){
+                    if(success) {
+                        alert('The anonymous url has been copied to clipboard!');
+                        success = false;
+                    }
+                });
 
             } catch (err) {
                 console.log('Oops, unable to copy');
