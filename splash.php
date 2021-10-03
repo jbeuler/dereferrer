@@ -100,10 +100,14 @@
                        style="width: 300px;">
                 <button type="button" id="anonymize-url-btn">Anonymize</button>
             </form>
-            <div style="display:none; border:none;margin-top: 20px;
+            <div style="display:none; border: none;
+    margin-top: 35px;
     padding: 20px;
     border-radius: 15px;
-    background: #0e66b914;" id="js-copylabel" readonly></div>
+    background: rgba(14, 102, 185, 0.08);
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;" id="js-copylabel" readonly></div>
         </div>
 
         <div class="row icon-boxes">
